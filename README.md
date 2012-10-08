@@ -31,6 +31,8 @@ Developing Scribus
     - Forking to github
   - Qt Creator
   - From the command line
+  - Windows
+  - Mac OS
 - Your first Patch
 - Scribus code organisation
   (cf. the mailing list post by elvis)
