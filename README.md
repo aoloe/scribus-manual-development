@@ -36,3 +36,5 @@ Developing Scribus
 - Your first Patch
 - Scribus code organisation
   (cf. the mailing list post by elvis)
+- Getting people to test your work
+- Getting your code into trunk
