@@ -1,0 +1,2 @@
+# add the following line to the parent directory's CMakeLists.txt file
+ADD_SUBDIRECTORY(sample)

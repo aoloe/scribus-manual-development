@@ -1,15 +1,15 @@
-scribus-manual-development
-=======================
+# Developing Scribus
 
-Developing Scribus
+(or contributing to Scribus)
 
-- What is Scribus?
+
+- [SCRB]What is Scribus?
   - DTP software
   - Volonteers, not commercial backed project
   - Team and contributors
   - Non programmers as contributors
-- How can you help?
-- How is Scribus Developed?
+- [HOWH]How can you help?
+- [HOWD]How is Scribus Developed?
   - Communication
 	- IRC
 	- Mailing lists
@@ -17,9 +17,9 @@ Developing Scribus
 	- Forum
   - The bug tracker
   - The projects platform
-- Basic facts
+- [FACT]Basic facts
   - C++/Qt
-- Setting up your dev environment
+- [SETP]Setting up your dev environment
   - Linux
   - Get Dependencies
     - Debian and Ubuntu
@@ -33,6 +33,15 @@ Developing Scribus
   - From the command line
   - Windows
   - Mac OS
-- Your first Patch
+  - Getting help
+- [PATC]Your first Patch
 - Scribus code organisation
   (cf. the mailing list post by elvis)
+- [PLUG]Creating a plugin
+- [GLSR]Glossary
+- [INDX]Index
+
+
+resources:
+- handout/scribus_development/scribus_development.txt
+- scribus-ui-iv-iu/SamplePlugin/08_Documentation/01_HowToCreateAPlugin.mk
