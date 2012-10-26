@@ -38,6 +38,7 @@
 - Scribus code organisation
   (cf. the mailing list post by elvis)
 - [PLUG]Creating a plugin
+- [DIAL]Creating a dialog with QT Designer
 - [GLSR]Glossary
 - [INDX]Index
 
