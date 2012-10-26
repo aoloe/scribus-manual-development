@@ -1,0 +1,2 @@
+- "Ok" (or the action name) and "Cancel" should be defined for every dialog that triggers an action, but not for a dialog managing resources
+- add a cancel button only if necessary... ESC and the crossed box on the top right corner of the window already close the dialog
