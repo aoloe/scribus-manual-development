@@ -39,6 +39,7 @@
   (cf. the mailing list post by elvis)
 - Getting people to test your work
 - Getting your code into trunk
+- [GITW]Working with git
 - [PLUG]Creating a plugin
 - [DIAL]Creating a dialog with QT Designer
 - [GLSR]Glossary
