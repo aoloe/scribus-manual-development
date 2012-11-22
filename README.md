@@ -35,6 +35,10 @@
   - Mac OS
   - Getting help
 - [PATC]Your first Patch
+- [DEBG]Debugging
+  - Debugging with Qt Creator
+  - Debugging with gdb
+  - Debugging with qDebug()
 - Scribus code organisation
   (cf. the mailing list post by elvis)
 - Getting people to test your work
