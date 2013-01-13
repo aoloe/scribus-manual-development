@@ -1,6 +1,8 @@
 # Set up your development environment
 
-The easiest way to get a development environment for contribution is to start on Linux. You can choose to work on a machine with one of the several Linux distributions installed, or install one of the distributions in a virtual machine.
+The easiest way to get a development environment for contribution is to work on Linux. You can choose to work on a machine with one of the several Linux distributions installed, or install one of the distributions in a virtual machine.
+
+In this chapter we will first go through the configuration of a Linux virtual machine on Mac OS X and Microsoft Windows, then explain how to
 
 Currently, the compilation of 
 
