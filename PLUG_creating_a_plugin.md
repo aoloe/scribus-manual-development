@@ -58,3 +58,5 @@ Scribus does not really have an API for plugins: You can access any functionalit
 <pre>
 ADD_DEPENDENCIES(${SCRIBUS_EXPORTEPUB_PLUGIN} ${EXE_NAME})
 </pre>
+
+# Adding a progress bar
