@@ -59,3 +59,8 @@ how to add a new function to the scripter?
   - current selection
   - the current frame or
   - the style named through the parameter
+
+#Updating the Scripter API Documentation
+
+- Install the Sphinx documentation system (`python-sphynx` on debian).
+- Fork [jainbasil's Github repository](https://github.com/jainbasil/scripter-doc) and clone it.
