@@ -1,3 +1,7 @@
+This repository is deprecated and won't be updated anymore.
+
+The content has been moved to <https://github.com/aoloe/libregraphics-manual-scribus-development>.
+
 # Developing Scribus
 
 (or contributing to Scribus)
