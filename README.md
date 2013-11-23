@@ -9,7 +9,7 @@ The content has been moved to <https://github.com/aoloe/libregraphics-manual-scr
 
 - [SCRB]What is Scribus?
   - DTP software
-  - Volonteers, not commercial backed project
+  - Volunteers, not commercial backed project
   - Team and contributors
   - Non programmers as contributors
 - [HOWH]How can you help?
