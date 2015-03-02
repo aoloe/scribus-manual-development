@@ -57,3 +57,7 @@ The content has been moved to <https://github.com/aoloe/libregraphics-manual-scr
 resources:
 - handout/scribus\_development/scribus\_development.txt
 - scribus-ui-iv-iu/SamplePlugin/08\_Documentation/01\_HowToCreateAPlugin.mk
+
+# Notes
+
+`scribus/scplugin.cpp` defines `ScPlugin`, `ScActionPlugin` and `ScPersistentPlugin` that are defined for different tasks. See the comment at the beginning of the file for more details.
