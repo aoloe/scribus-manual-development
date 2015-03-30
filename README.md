@@ -66,3 +66,5 @@ resources:
 # Notes
 
 `scribus/scplugin.cpp` defines `ScPlugin`, `ScActionPlugin` and `ScPersistentPlugin` that are defined for different tasks. See the comment at the beginning of the file for more details.
+
+- a good example of dev docs posted by kunda: http://musescore.org/en/developers-handbook
