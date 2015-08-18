@@ -1,3 +1,5 @@
+# notes
+
 JLUC sayz:
 
 Sharing that list of UI and UX principles and reminders :

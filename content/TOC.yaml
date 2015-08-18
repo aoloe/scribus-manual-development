@@ -1,10 +1,12 @@
 - Introduction
 - What is Scribus
-  - Free DTP software written c++
+  - Free DTP software written in c++
   - Volonteers, not commercial backed project
   - Team and contributors
-  - Non programmers as contributors
 - How can you help?
+  - C++ programmers
+  - Python programmers
+  - Not (yet) a programmer
 - How is Scribus Developed?
   - The IRC channel
   - The mailing lists
@@ -14,6 +16,8 @@
 - The Scribus Code
   - C++/Qt
   - The repositories (SVN and Git)
+  - Scribus code organisation  
+    (cf. the mailing list post by elvis)
   - The core classes
   - The dialogs and other functionality
   - The plugins
@@ -25,11 +29,10 @@
     - Microsoft Windows
     - Apple OS X
     - Getting help
-- Getting the code
-    - Working with Svn
-    - Working with GitHub
-    - Working with the Scribus Git Repository
 - Qt Creator
+- Getting the code
+  - Working with Svn
+  - Working with GitHub
 - Submitting patches
   - Your first Patch
   - Getting people to test your work
@@ -38,13 +41,13 @@
   - Debugging with Qt Creator
   - Debugging with gdb
   - Debugging with qDebug()
-- The Scribus Code
-  - Scribus code organisation  
-    (cf. the mailing list post by elvis)
-  - Creating a Plugin
-  - Creating a dialog
-  - How to add undo code
+ - Creating a plugin
+ - Creating a dialog
+- Specific topics
+  - The undo code
 - UI and UX
 - Scripting and Python
   - An Introduction to Scripting
+  - When to prefer scripts
   - Enhancing the Scripter
+- Glossary

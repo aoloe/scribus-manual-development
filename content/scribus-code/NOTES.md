@@ -1,15 +1,25 @@
+# Notes
+
+- "Ok" (or the action name) and "Cancel" should be defined for every dialog that triggers an action, but not for a dialog managing resources
+- add a cancel button only if necessary... ESC and the crossed box on the top right corner of the window already close the dialog
+- Git and SVN are revision system: a system that helps you keep revisions (old copies) of your files (so also of your code).
+- most branches are short living and it's not really a problem... but sometimes we really have to update them... and it can be a pain.  
+  `git diff --stat origin/master` show you different files, if some of them differ because of changes in the master you do `git checkout origin/master -- path\_to\_file`... next step being a normall `git diff trunk svn` and carefully looks for places changed by other other people's commits, not from your branch.
+
+## Elvis' email to the ML
+
 this draft has been build upon elvis mail to the scribus-dev mailing list
 
 [scribus-dev] Some notes/questions about Scribus internals and my project
 
-Central Classes
------------------------------
+### Central Classes
+
 These are notes on (a few of) the central classes of Scribus. I've
 excluded the styles system as it has kind of OK documentation in
 styles/overview.txt.
 
-ScribusDoc
----------------
+### ScribusDoc
+
 Self-explanatory. Represents a document in Scribus. Some
 responsibilities seems to be:
 
@@ -18,23 +28,23 @@ responsibilities seems to be:
 - manage styles and colors.
 - manage grid and guides.
 
-ScribusView
-----------------
+### ScribusView
+
 Central zoomable scrollarea showing a document. Its primary
 responsibility seems to be to provide a UI for scrolling and zooming
 (naturally).
 
-PageItem and its subclasses
--------------------------------------
+### PageItem and its subclasses
+
 PageItem is the base class for all items. The base class seems to be a
 bit intertwined with its subclasses, and can be queried for and
-converted to its subclass type using is*() and as*() methods,
+converted to its subclass type using `is*()` and `as*()` methods,
 respectively (e.g. isArc(), asArc()). Page items have many
 responsibilities, but most important for me seems to be that they draw
 themselves to the canvas in their DrawObj_Item() method.
 
-UndoManager
-------------------
+### UndoManager
+
 Central singleton class of the undo/redo system. Manages a map of undo
 stacks, one for each document. I'm not 100% sure how the undo system
 works as it does not seem to use the traditional command pattern for
@@ -71,12 +81,8 @@ information, I prepare function which return all that information in string by
 serializing it ("saxing", like in SLA file, when all information is in human readable strings 
 in tagged fashion, in a somehow XML-ish manner).
 
+### General Notes
 
-
-
-
-General Notes
--------------------
 Many of the classes such as ScribusDoc, ScribusView and PageItem have
 a huge number of public member variables, many of them undocumented,
 which users (and subclasses) of the classes rely on, and it's a bit
@@ -86,8 +92,8 @@ think I have a somewhat OK view of it now.
 Isn't that ugly? :-) It's on the roadmap for refactoring.
 
 
-CanvasMode
------------------
+### CanvasMode
+
 Different modes of operations on the canvas seems to be implemented in
 classes inheriting from CanvasMode. As an example, there is a canvas
 mode for editing a polygon, editing a spiral et.c.
@@ -107,15 +113,14 @@ before the CanvasGesture was started. Gestures could be stacked).
 This structure made it possible to concentrate on a single user interaction
 when implementing mouse event code.
 
-Notes on Painting of Items
------------------------------------
+### Notes on Painting of Items
+
 Painting seems to be done in two places. The on-canvas painting of
-items seems to be done by items themselves in their DrawObj_Item()
-(and DrawObj_Decoration()) method. Painting of items for print output
-seems to be done in the respective drawItem_*() methods in
-ScPageOutput.
+items seems to be done by items themselves in their `DrawObj_Item()`
+(and ?`DrawObj_Decoration()`) method. Painting of items for print output
+seems to be done in the respective `drawItem_*()` methods in
+`ScPageOutput`.
 
 IIRC ScPageOutput is only used for printing in Scribus. There's additional
-code
-in pdflib_core.cpp and pslib.cpp (Yes, 4 versions of the same code. That's
+code in `pdflib_core.cpp` and `pslib.cpp` (Yes, 4 versions of the same code. That's
 another refactoring on the roadmap!) 
