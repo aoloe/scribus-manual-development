@@ -59,3 +59,45 @@ Just take care, that you don't install Linux on your computer but only in the vi
 After having installed Linux, the next step is to setup the development environment. Differently than with other Operating Systems, the Linux distribution will provide you with all the software you need in a repository. You will not have to look for software on the Web, but simply use the Package manager provided.
 
 While the process is the same, different distributions have small differences. We will present the procedure for each fo the mainstream distributions
+
+
+## Setting up with OS X
+
+brew freetype says
+LDFLAGS:  -L/usr/local/opt/freetype/lib
+CPPFLAGS: -I/usr/local/opt/freetype/include
+brew pimxan says
+LDFLAGS:  -L/usr/local/opt/pixman/lib
+CPPFLAGS: -I/usr/local/opt/pixman/include
+brew cairo says
+LDFLAGS:  -L/usr/local/opt/cairo/lib
+CPPFLAGS: -I/usr/local/opt/cairo/include
+brew fontconfig says
+LDFLAGS:  -L/usr/local/opt/fontconfig/lib
+CPPFLAGS: -I/usr/local/opt/fontconfig/include
+
+
+	cmake -DBUILD_OSX_BUNDLE=1 -DCMAKE_INSTALL_PREFIX:PATH=/Applications/ ..
+
+	cmake -DFREETYPE_INCLUDE_DIRS=/usr/local/opt/freetype/include/
+	set CMAKE_MODULE_PATH=/usr/local/opt/freetype
+
+
+	cmake -DBUILD_OSX_BUNDLE=1 -DCMAKE_INSTALL_PREFIX:PATH=/Applications/ -DFREETYPE_INCLUDE_DIRS=/usr/local/opt/freetype/include/ ..
+
+
+	cmake -DBUILD_OSX_BUNDLE=1 -DCMAKE_INSTALL_PREFIX:PATH=/Applications/ -DFREETYPE_INCLUDE_DIRS=/usr/local/opt/freetype/include/ -DWANT_SYSTEM_CAIRO=1-DWANT_PRIVATE_CAIRO=0 -DPREFIX_CAIRO=/usr/local/opt/cairo -DFONTCONFIG_INCLUDE_DIR=/usr/local/opt/fontconfig ..
+
+
+	cmake -DBUILD_OSX_BUNDLE=1 -DCMAKE_INSTALL_PREFIX:PATH=/Applications/ -DFREETYPE_INCLUDE_DIRS=/usr/local/opt/freetype/include/ -DWANT_SYSTEM_CAIRO=1-DWANT_PRIVATE_CAIRO=0 -DPREFIX_CAIRO=/usr/local/opt/cairo -DFONTCONFIG_INCLUDE_DIRS=/usr/local/opt/fontconfig/include/ -DFONTCONFIG_LIBRARY_DIRS=/usr/local/opt/fontconfig/lib/ --debug-output ..
+
+
+removing the pkg-config part from the fontconfig cmake file lets me go through cmake...
+but, then, make can't find freetype...
+
+
+	export LDFLAGS="-R/usr/local/opt/fontconfig/lib -L/usr/local/opt/fontconfig/lib"
+	export CPPFLAGS="-I/usr/local/opt/fontconfig/include"
+
+	export LDFLAGS="-R/usr/local/opt/fontconfig/lib -L/usr/local/opt/fontconfig/lib -R/usr/local/opt/freetype/lib -L/usr/local/opt/freetype/lib"
+	export CPPFLAGS="-I/usr/local/opt/fontconfig/include -I/usr/local/opt/freetype/include"
