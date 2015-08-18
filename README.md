@@ -1,3 +1,12 @@
+# Scribus Development Manual
+
+This repository is deprecated and won't be updated anymore.
+
+The content has been moved to <https://github.com/aoloe/libregraphics-manual-scribus-development>.
+
+Some time later... it's probably better to move <https://github.com/aoloe/libregraphics-manual-scribus-development> into this directory's content...
+
+
 # Developing Scribus
 
 (or contributing to Scribus)
@@ -5,7 +14,7 @@
 
 - [SCRB]What is Scribus?
   - DTP software
-  - Volonteers, not commercial backed project
+  - Volunteers, not commercial backed project
   - Team and contributors
   - Non programmers as contributors
 - [HOWH]How can you help?
@@ -53,3 +62,9 @@
 resources:
 - handout/scribus\_development/scribus\_development.txt
 - scribus-ui-iv-iu/SamplePlugin/08\_Documentation/01\_HowToCreateAPlugin.mk
+
+# Notes
+
+`scribus/scplugin.cpp` defines `ScPlugin`, `ScActionPlugin` and `ScPersistentPlugin` that are defined for different tasks. See the comment at the beginning of the file for more details.
+
+- a good example of dev docs posted by kunda: http://musescore.org/en/developers-handbook

@@ -1,3 +1,9 @@
+# TODO
+
+- use the name "model" instead of action
+- use the options to pass the values between the dialog and the model
+- define a qDebug() for the options
+
 ## Adding an empty plugin
 - the first step is to create a new branch for the plugin. for the plugins it's not as important as for code that is scattered through the whole code, but it's still a good idea to do so, most of all if you whish to get other people to contribute to the development or simply help testing your work.
 - create a new directory in the plugins/ directory with the name of the plugin (or in one of its subdirectories if the new plugin is part of a type). In this examples we will use the name "sample"... to create the sample plugin.
@@ -34,7 +40,7 @@
   - add the macro QT4\_WRAP\_UI(SCRIBUS\_SAMPLE\_PLUGIN\_UI\_SOURCES ${SCRIBUS\_SAMPLE\_PLUGIN\_UI\_SRC} )
   - ${SCRIBUS\_SAMPLE\_PLUGIN\_UI\_CPP} ${SCRIBUS\_SAMPLE\_PLUGIN\_UI\_SOURCES} to the ADD\_LIBRARY macro
 
-# Adding your actions
+## Adding your actions
 
 The real code will be in the class named after the plugin name. In the SampleDialog class you will then connect the events from the dialog with the single actions.
 If the plugin is not trivial you may want to split the logic in multiple classes, which you will load from your main plugin class (in our case the Sample class)
@@ -59,4 +65,7 @@ Scribus does not really have an API for plugins: You can access any functionalit
 ADD_DEPENDENCIES(${SCRIBUS_EXPORTEPUB_PLUGIN} ${EXE_NAME})
 </pre>
 
+# Using an "Options" structure to pass around the values from the dialog
+
 # Adding a progress bar
+
