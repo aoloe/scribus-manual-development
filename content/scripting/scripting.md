@@ -1,6 +1,6 @@
 # Enhancing the Scribus scripter
 
-## The thew Scripter
+## The new scripter
 
 - The Scripter itself is programmed in Python
 

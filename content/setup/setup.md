@@ -103,3 +103,19 @@ but, then, make can't find freetype...
 
 	export LDFLAGS="-R/usr/local/opt/fontconfig/lib -L/usr/local/opt/fontconfig/lib -R/usr/local/opt/freetype/lib -L/usr/local/opt/freetype/lib"
 	export CPPFLAGS="-I/usr/local/opt/fontconfig/include -I/usr/local/opt/freetype/include"
+
+# Setup your develepment environment on Debian or Ubuntu
+
+## Getting the Dependencies
+
+## Getting the Dependencies with the command line
+
+## Debian versions
+
+If possible, use debian testing or unstable.
+
+## Ubuntu
+
+To compile and run scribus without problem in Ubuntu 12.10 you may need to set the  paths to python libs or add them to cmake command line, otherwise python3 libs will be preferred over python2
+
+	cmake ../Scribus -DWANT_SYSTEM_CAIRO=1 -DCMAKE_INSTALL_PREFIX=../Scribus-bin -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so -DPYTHON_INCLUDE_DIR=/usr/include/python2.7

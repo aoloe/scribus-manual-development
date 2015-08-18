@@ -7,7 +7,7 @@
   - C++ programmers
   - Python programmers
   - Not (yet) a programmer
-- How is Scribus Developed?
+- The community: how is Scribus developed?
   - The IRC channel
   - The mailing lists
   - The Forums
@@ -37,6 +37,7 @@
   - Your first Patch
   - Getting people to test your work
   - Getting your code into trunk
+  -Working with Github
 - Debugging
   - Debugging with Qt Creator
   - Debugging with gdb
@@ -45,9 +46,12 @@
  - Creating a dialog
 - Specific topics
   - The undo code
+- For non programmers
+  - Getting the development version
 - UI and UX
 - Scripting and Python
   - An Introduction to Scripting
   - When to prefer scripts
   - Enhancing the Scripter
+- Useful literature
 - Glossary

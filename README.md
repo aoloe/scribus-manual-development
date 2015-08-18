@@ -1,75 +1,25 @@
 # Scribus Development Manual
 
-This repository is currently being resurcted.
+This repository is the sum of lot of notes taken over the time and is not a yet in a readable state.
 
-- the content is being moved into the `content/` directory
-- a `TOC.yaml` file is being created
-- the content of <https://github.com/aoloe/libregraphics-manual-scribus-development> is being merged into this repostiory.
-
-# Developing Scribus
-
-(or contributing to Scribus)
-
-
-- [SCRB]What is Scribus?
-  - DTP software
-  - Volunteers, not commercial backed project
-  - Team and contributors
-  - Non programmers as contributors
-- [HOWH]How can you help?
-- [HOWD]How is Scribus Developed?
-  - Communication
-	- IRC
-	- Mailing lists
-	  (scribus + scribus-dev (currently not really used))
-	- Forum
-  - The bug tracker
-  - The projects platform
-- [FACT]Basic facts
-  - C++/Qt
-- [SETP]Setting up your dev environment
-  - Linux
-  - Get Dependencies
-    - Debian and Ubuntu
-	  - GUI
-	  - Command line
-	- Fedora
-  - [GITB]Git
-    - Working in the Scribus git repository
-    - Forking to github
-  - Qt Creator
-  - From the command line
-  - Windows
-  - Mac OS
-  - Getting help
-- [PATC]Your first Patch
-- [DEBG]Debugging
-  - Debugging with Qt Creator
-  - Debugging with gdb
-  - Debugging with qDebug()
-- Scribus code organisation
-  (cf. the mailing list post by elvis)
-- Getting people to test your work
-- Getting your code into trunk
-- [GITW]Working with git
-- [PLUG]Creating a plugin
-- [DIAL]Creating a dialog with QT Designer
-- [GLSR]Glossary
-- [INDX]Index
-
+Feel free to choose a chapter and take care of it.
 
 resources:
-- handout/scribus\_development/scribus\_development.txt
-- scribus-ui-iv-iu/SamplePlugin/08\_Documentation/01\_HowToCreateAPlugin.mk
+
 
 # Notes
 
-`scribus/scplugin.cpp` defines `ScPlugin`, `ScActionPlugin` and `ScPersistentPlugin` that are defined for different tasks. See the comment at the beginning of the file for more details.
-
+- `scribus/scplugin.cpp` defines `ScPlugin`, `ScActionPlugin` and `ScPersistentPlugin` that are defined for different tasks. See the comment at the beginning of the file for more details.
+- make sure that all of the following old files are in here:
+  - handout/scribus\_development/scribus\_development.txt
+  - scribus-ui-iv-iu/SamplePlugin/08\_Documentation/01\_HowToCreateAPlugin.mk
 - a good example of dev docs posted by kunda: http://musescore.org/en/developers-handbook
+- a good possible source of inspiration: http://www.davidrevoy.com/article193/guide-building-krita-on-linux-for-cats
 
 # Licence
 
 CC-BY-SA
+
+Contributors:
 
 - Ale Rimoldi
