@@ -119,3 +119,22 @@ If possible, use debian testing or unstable.
 To compile and run scribus without problem in Ubuntu 12.10 you may need to set the  paths to python libs or add them to cmake command line, otherwise python3 libs will be preferred over python2
 
 	cmake ../Scribus -DWANT_SYSTEM_CAIRO=1 -DCMAKE_INSTALL_PREFIX=../Scribus-bin -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so -DPYTHON_INCLUDE_DIR=/usr/include/python2.7
+
+## Fedora
+
+At least on Fedora 20, except for some of the new importers, all of the dependencies are available as RPMs from Fedora's repository.
+
+As a start, run yum groupinstall 'development tools'. Then run "sudo yum install" for the packages below and follow the instructions at http://wiki.scribus.net/canvas/Download and http://wiki.scribus.net/canvas/Building_SVN_versions_with_CMake
+
+~~~
+svn cmake gcc gcc-c++ ccache qtchooser
+apr-devel apr-util-devel flex-static libXp libXp-devel libexif-devel libtool-ltdl-devel libusb-devel netpbm-progs t1lib openjpeg-devel openjpeg-libs
+turbojpeg turbojpeg-devel boost GraphicsMagick fontconfig-devel libX11-devel  libXext-devel libXaw-devel Xaw3d-devel libXt-devel poppler-devel poppler-qt5 
+poppler-qt5-devel poppler-qt poppler-qt-devel poppler-cpp poppler-cpp-devel  ncurses-devel freeglut freeglut-devel libpaper libpaper-devel libmspub 
+libmspub-devel libvisio libvisio-devel lcms2 lcms2-devel OpenSceneGraph OpenSceneGraph-devel podofo podofo-devel GraphicsMagick-devel 
+libjpeg-turbo-devel libtiff-devel python-devel hunspell hunspell-devel  libxml++-devel gtkmm24-devel libgnomecanvasmm26-devel cups-devel libstdc++-devel gcc-c++ 
+freetype-devel cairo-devel libxml2-devel lcms-devel libpng-devel libjpeg-devel libwpg-devel boost boost-devel 
+openssl-devel git wget 'freeglut*' 'libXmu-*' libXi-devel libXrandr-devel 'qt5-qt*'
+~~~
+
+(fedora description based on william bader's email to the scribus mailing list on 7.9.2015)
