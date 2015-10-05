@@ -1,5 +1,7 @@
 # Notes
 
+participation (not only through coding) is useful and can help get changes that you'd like in to Scribus (though that's not guaranteed).
+
 ## Installing the program
 
 If you want to play with it and, eventually, submit propositions for improvements or bug reports you can get a pre-compiled package, if one is available for your platform.
@@ -23,4 +25,3 @@ TODO: explain how to get from homebrew
 ### Windows
 
 TODO: explain how to get a Virtualbox to work
-
