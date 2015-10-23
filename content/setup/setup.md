@@ -108,6 +108,50 @@ but, then, make can't find freetype...
 
 ## Getting the Dependencies
 
+On Debian and Ubuntu you will need the following packages:
+
+According to the [Scribus PPA dsc file](https://launchpadlibrarian.net/216817551/scribus-ng_1.5.0-0ubuntu15.10.0~ppa1.dsc) you will need the following packages for compiling Scribus:
+
+- cmake (>= 2.4.3),
+- debhelper (>= 9),
+- gettext,
+- libboost-python-dev,
+- libcairo2-dev,
+- libcdr-dev (>= 0.1),
+- libcups2-dev,
+- libgraphicsmagick1-dev,
+- libhunspell-dev,
+- libhyphen-dev,
+- liblcms2-dev,
+- libmspub-dev (>= 0.1),
+- libosgearth-dev,
+- libpagemaker-dev,
+- libpodofo-dev (>= 0.9.0),
+- libpoppler-private-dev,
+- libpoppler-qt5-dev,
+- libqt5opengl5-dev,
+- libqt5webkit5-dev,
+- librevenge-dev,
+- libtiff-dev,
+- libvisio-dev (>= 0.1),
+- libwpg-dev,
+- libxml2-dev (>= 2.6.16),
+- python-all-dev (>= 2.6.6-3~),
+- qtbase5-dev,
+- qttools5-dev,
+- qttools5-dev-tools,
+- zlib1g-dev
+
+Some remarks:
+- `libosgearth-dev` might lead to some issues: if you encounter any "OSG" related problems when compiling scribus, please try to remove this package.  
+- The following packages are not mandatory:
+  - libcdr-dev (>= 0.1),
+  - libpagemaker-dev,
+  - libqt5opengl5-dev,
+  - libvisio-dev (>= 0.1),
+  - libwpg-dev
+- `python-all-dev` seems to be a bit broad (in the future we might want to find out which `python-*-dev` packages are really needed)
+
 ## Getting the Dependencies with the command line
 
 ## Debian versions
