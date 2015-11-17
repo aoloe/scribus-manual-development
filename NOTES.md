@@ -142,6 +142,11 @@ and my proposal to HOST:
 - when you touch a function, always try to write a doxygen doc for it and make a patch with it (if the team agrees that there is a need for it, of course... and the comment should describe what the function does and not be obvious: no /** @return returns x */ ABC::getX() {return x;}, please :-)
 - when you see a function that does multiple things that are not summarized in the function name, split the function in private function that are specific to the task (always if the team agrees)
 
+if you don't know what refactoring or doxygen are, please first read the Wikipedia entries:
+
+- https://en.wikipedia.org/wiki/Code_refactoring
+- https://en.wikipedia.org/wiki/Doxygen
+
 ### Documenting the class members
 
     Double oldXpos; ///< Stores the old X-position for undo action. Is used to detect move actions.
