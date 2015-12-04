@@ -152,6 +152,16 @@ Some remarks:
   - libwpg-dev
 - `python-all-dev` seems to be a bit broad (in the future we might want to find out which `python-*-dev` packages are really needed)
 
+You can get the latest `.dsc` by going to the Launchpad website:
+
+- Go to the "Scribus Team" page on Launchpad: https://launchpad.net/~scribus
+- Click on "PPA for Scribus friends" and then click on "View package details"
+- You should get a list of "Source" packages. Click on the latest "scribus-trunk" package
+- A the end of the page you should see a list of "Package files"
+- Click on the link to the .dsc file and you will see a text file
+
+In the .dsc file, the "Build depends" section tells you which package this version of Scribus depends. The names for those packages are exactly the same or very similar to the ones used by Debian.
+
 ## Getting the Dependencies with the command line
 
 ## Debian versions
