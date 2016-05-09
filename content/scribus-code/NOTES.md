@@ -129,3 +129,13 @@ another refactoring on the roadmap!)
 
 it's mess and not well architected. Central classes are ScribusDoc and PageItem* for the data, ActionManager for any user actions, ScribusView and ScribusMainWindows (in scribus.cpp) for the UI.
 all ui dialogs should be found in the ui directory under the hood there's ScImage for image handling, text/StoryText for text, pdflib_core and pdfwriter for PDF export
+
+## Navigating the code
+
+
+if you want to find out where things are done in scribus, the simplest approach is to go for the labels:
+
+- search for the "Multiple Duplicate" that you find in the menu (just take care that the underlined items break the string)
+- it will telly you that the menu is registered as "itemMulDuplicate" in the action manager (actionmanager.cpp) and that the dialog is defined in ui/multipleduplicate.ui
+- if you have a look in actionmanager.cpp, you will find that itemMulDulicate defines a signal that calls mainWindow::duplicateItemMulti(), mainWindow being defined in the matching .h file and being of type ScribusMainWindow, which is defind in scribus.cpp (you can find out, by searching for "ScribusMainWindow::".
+- on the other side, if you look in the ui/ directory, you will find out that there are also a .cpp an .h file in there with the same name.
