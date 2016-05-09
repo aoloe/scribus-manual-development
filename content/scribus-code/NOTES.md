@@ -124,3 +124,8 @@ seems to be done in the respective `drawItem_*()` methods in
 IIRC ScPageOutput is only used for printing in Scribus. There's additional
 code in `pdflib_core.cpp` and `pslib.cpp` (Yes, 4 versions of the same code. That's
 another refactoring on the roadmap!) 
+
+## avox says:
+
+it's mess and not well architected. Central classes are ScribusDoc and PageItem* for the data, ActionManager for any user actions, ScribusView and ScribusMainWindows (in scribus.cpp) for the UI.
+all ui dialogs should be found in the ui directory under the hood there's ScImage for image handling, text/StoryText for text, pdflib_core and pdfwriter for PDF export
