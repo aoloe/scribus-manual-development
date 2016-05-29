@@ -119,3 +119,13 @@ You will have to use a different name (like `scribus-dev`) if you already have S
 cd /usr/local/bin/
 sudo ln -s ~/bin/scribus/bin/scribus scribus-dev
 ~~~
+
+## Compiling with Qt Creator
+
+If you're using Qt Creator, you can simply create a new project and use the Github address of the mirror:
+
+~~~.sh
+git@github.com:scribusproject/scribus.git
+~~~
+
+As long as the dependencies are met, Qt Creator will be able to figure everything you need.
