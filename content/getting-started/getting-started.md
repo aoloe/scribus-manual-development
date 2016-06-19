@@ -129,3 +129,64 @@ git@github.com:scribusproject/scribus.git
 ~~~
 
 As long as the dependencies are met, Qt Creator will be able to figure everything you need.
+
+## Adding a plugin from a Github repository
+
+If you want to use or improve a plugin that has its own Github repository, you can download its code and add it to the Scribus code.
+
+We suggest you to first carefully read the plugin's README file.  
+
+On top of the specific instructions you get in the README files, this section explains with two examples -- the API and Epub plugins -- how to get the plugins to be compiled with Scribus.
+
+First you'll have to clone the repository in the directory where you're storing the code you compile (as previously stated we assume here that it's `~/src/~).  
+Then, you'll clone the API plugin into it:
+
+~~~.sh
+cd ~/src/
+git clone https://github.com/aoloe/scribus-plugin-API.git
+~~~
+
+Now, the tricky part: in the Scribus sources you don't need the full repository, but only the files that are in the plugin's `src/` directory. 
+
+We will create a symlink in the Scribus' `plugins/` directory that points to the plugin's `src/` directory:
+
+~~~.sh
+cd ~/src/scribus/
+cd scribus/plugins/
+ln -s ~/src/scribus-plugin-API/src scribusAPI
+~~~
+
+Instead of symlinking the `src/` directory, you can also copy -- and rename -- it to the Scribus' `plugins` directory. If you don't plan to change the code and don't want to get updates through git this is good enough. Otherwise, using the symlink will make things much easier for you.
+
+Finally, you need to tell Cmake that you've added a new plugin. Make sure that you're in the same directory where you have added the plugin and add the following line:
+
+~~~.cmake
+ADD_SUBDIRECTORY(scribusAPI)
+~~~
+
+If you prefer, you can run this shell command instead, which will add the line for you:
+
+~~~.sh
+echo "ADD_SUBDIRECTORY(scribusAPI)" >> CMakesLists.txt
+~~~
+
+You have to repeat this instructions for each plugin you want to add from Github.  
+As an exapmle for adding the Epub plugin you need to:
+
+~~~.sh
+cd ~/src/
+git clone https://github.com/aoloe/scribus-plugin-export-epub.git
+cd ~/src/scribus/
+cd scribus/plugins/export/
+ln -s ~/src/scribus-plugin-export-epub/src epub
+echo "ADD_SUBDIRECTORY(epub)" >> CMakesLists.txt
+~~~
+
+In order to get the new plugins to be compiled you need to rerun cmake (with all parameters you have been using the first time) first:
+
+~~~.sh
+cd ~/src/scribus/build/
+cmake -DCMAKE_INSTALL_PREFIX:PATH=~/bin/scribus -DWANT_DEBUG=1 -DWANT_GUI_LANG="en_GB;de;fr;it;en" ..
+make
+make install
+~~~
