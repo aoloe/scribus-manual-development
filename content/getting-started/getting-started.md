@@ -24,6 +24,7 @@ According to the Scribus PPA for ubuntu, you'll need the following packages for 
 - libcups2-dev,
 - libfreehand-dev,
 - libgraphicsmagick++1-dev,
+- libharfbuzz-dev,
 - libhunspell-dev,
 - libhyphen-dev,
 - libicu-dev,
