@@ -16,6 +16,7 @@ Currently, you can compile Scribus from the command line or use Qt Creator.
 
 According to the Scribus PPA for ubuntu, you'll need the following packages for compiling Scribus:
 
+- build-essential
 - cmake (>= 2.4.3),
 - gettext,
 - libboost-python-dev,
