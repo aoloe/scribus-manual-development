@@ -98,7 +98,7 @@ In the case the packages are installed but the version is too old, you'd better 
 
 You can retry until `cmake` runs successfully. In some cases you will have to delete the `build/` directory and restart from scratch.
 
-Once `cmake has run successfully, you can now _make_ Scribus.
+Once `cmake` has run successfully, you can now _make_ Scribus.
 
 ~~~.sh
 make -j4
@@ -121,6 +121,16 @@ You will have to use a different name (like `scribus-dev`) if you already have S
 cd /usr/local/bin/
 sudo ln -s ~/bin/scribus/bin/scribus scribus-dev
 ~~~
+
+## If the compilation fails
+
+### It does not `cmake`
+
+- Is the `cmake` version new enough?
+- Get the output from `cmake` by redirecting it to a file:
+  ~~~.sh
+  cmake .. >> cmake-log.txt 2>&1
+  ~~~
 
 ## Compiling with Qt Creator
 
