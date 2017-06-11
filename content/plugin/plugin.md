@@ -24,6 +24,26 @@
 - add a CMakeLists.txt file in the plugin directory
 - you can now try to compile the plugin. at the end you should have an entry "Sample" in your "Extra" menu
 
+## Plugins specificities
+
+### Creating a plugin that reads text files
+
+- Create the plugin in the `plugins/gettext/` directory
+- Name the directory and the main plugin's file by the type of file you want your pluging to be able to read (`markdown/markdown.cpp`).
+  - Each plugin defines three "free functions": 
+    - `FileFormatName()`
+    - `FileExtensions()`
+    - `GetText()`, where you create and run a plugin importer object.
+  - The class is mostly named by the type of the file followed by "GetText" (MarkdownGetText) and usually has three public functions:
+    - The creator receives from the "loading" parameters (file name, ...) from the `GetText()` function.
+    - `loadText()` loads the file content in an internal structure matching the format rules and the user's settings.
+    - `write()` adds the content to the outpustream that has been passed to the plugin.
+
+- put the plugin's implementation in a file with the `reader` ending (`markdown/markdownreader.cpp`).
+
+
+### Creating a plugin that export the file content
+
 ## Showing a dialog when the plugin runs
 
 - With Qt Designer create your dialog as a "Dialog with buttons" and save the .ui file in the plugin's directory as sample.ui. You should at least add a "Cancel" button which you will call "cancelButton"

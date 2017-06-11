@@ -77,6 +77,12 @@ or from the Github mirror
 git clone git@github.com:scribusproject/scribus.git
 ~~~
 
+or
+
+---.sh
+https://github.com/scribusproject/scribus.git
+---
+
 ## Compiling from the command line
 
 You should compile Scribus out of source and install it inside of your home directory.
