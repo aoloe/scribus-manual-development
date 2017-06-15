@@ -79,9 +79,9 @@ git clone git@github.com:scribusproject/scribus.git
 
 or
 
----.sh
+~~~.sh
 https://github.com/scribusproject/scribus.git
----
+~~~
 
 ## Compiling from the command line
 
