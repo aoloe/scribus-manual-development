@@ -34,6 +34,7 @@ According to the Scribus PPA for ubuntu, you'll need the following packages for 
 - libopenscenegraph-dev,
 - libpagemaker-dev,
 - libpodofo-dev,
+- libpoppler-cpp-dev
 - libpoppler-dev,
 - libpoppler-private-dev,
 - libqt5opengl5-dev,
