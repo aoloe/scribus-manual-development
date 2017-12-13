@@ -81,8 +81,20 @@ git clone git@github.com:scribusproject/scribus.git
 or
 
 ~~~.sh
-https://github.com/scribusproject/scribus.git
+git clone https://github.com/scribusproject/scribus.git
 ~~~
+
+### Getting the code for development
+
+If you plan to work on the Scribus code, you will probably want to clone your own fork of the [scribus repository](https://github.com/scribusproject/scribus):
+
+- Propbably, you will want to make sure that your have configured your system and your Github account with ssh keys: https://help.github.com/articles/connecting-to-github-with-ssh/
+- Use the "Fork" button at the top of the [scribus repository](https://github.com/scribusproject/scribus) to create your own fork.
+- Clone your own copy of Scribus: `git clone https://github.com/your-username/scribus.git`
+
+For more details please read [Github's forkin manual](https://help.github.com/articles/fork-a-repo/).
+
+
 
 ## Compiling from the command line
 
