@@ -60,6 +60,12 @@ You can get the latest `.dsc` by going to the Launchpad website:
 - A the end of the page you should see a list of "Package files"
 - Click on the link to the .dsc file and you will see a text file
 
+If you have the matching version of Scribus installed through the package management, on Debian and Ubuntu you can do:
+
+```sh
+sudo apt-get build-dep scribus-trunk
+```
+
 ### OS X
 
 TODO: To be done.
