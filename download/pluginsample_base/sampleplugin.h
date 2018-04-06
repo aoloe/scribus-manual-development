@@ -1,5 +1,5 @@
-#ifndef SCRIPTMANAGERPLUGIN_H
-#define SCRIPTMANAGERPLUGIN_H
+#ifndef SAMPLEPLUGIN_H
+#define SAMPLEPLUGIN_H
 
 #include "pluginapi.h"
 #include "scplugin.h"
@@ -8,17 +8,17 @@ class QString;
 class ScribusDoc;
 class ScribusMainWindow;
 
-class PLUGIN_API ScriptManagerPlugin : public ScActionPlugin
+class PLUGIN_API SamplePlugin : public ScActionPlugin
 {
 	Q_OBJECT
 public:
 
 	// Standard plugin implementation
-	ScriptManagerPlugin();
-	virtual ~ScriptManagerPlugin();
+	SamplePlugin();
+	virtual ~SamplePlugin();
 	/*!
 	\author Ale Rimoldi
-	\brief Run the Script manager
+	\brief Run a Sample Plugin
 	\param doc the current document
 	\param filename a file to export to
 	\retval bool true

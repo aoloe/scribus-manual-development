@@ -5,8 +5,9 @@
 - define a qDebug() for the options
 
 ## Adding an empty plugin
-- the first step is to create a new branch for the plugin. for the plugins it's not as important as for code that is scattered through the whole code, but it's still a good idea to do so, most of all if you whish to get other people to contribute to the development or simply help testing your work.
-- create a new directory in the plugins/ directory with the name of the plugin (or in one of its subdirectories if the new plugin is part of a type). In this examples we will use the name "sample"... to create the sample plugin.
+
+- If you're using Git, it's a good idea to create a new branch in your Scribus fork. Before starting with programming the plugin.
+- Create a new directory in the plugins/ directory with the name of the plugin (or in one of its subdirectories if the new plugin is part of a type). In this examples we will use the name "sample"... to create the sample plugin.
   - the boilerplate for loading and defining your code as a plugin, will go the file "sampleplugin.cpp"
   - the main code of your plugin will go to "sample.cpp"
   - if you are creating a dialog it will be called "sampledialog.ui" and it will be included through the files "sampledialog.cpp" and "sampledialog.h"
@@ -77,7 +78,7 @@ In the constructur, you will often want to pass the current document as a parame
 - add the widget (button, list, ...) with Qt Designer to the .ui file
 - add the method doing the class into the Sample class
 
-# Accessing the Scribus API
+## Accessing the Scribus API
 
 Scribus does not really have an API for plugins: You can access any functionality in Scribus from a plugin, but you have to take care that the code you're using is compiled before your own code.
 "Notamment", if you want to use functionality defined in the Scribus class (defined in the scribuscore.h file) you will have to add the dependincy to the main executable file at the end of the plugins' CMakeLists file:
@@ -85,7 +86,23 @@ Scribus does not really have an API for plugins: You can access any functionalit
 ADD_DEPENDENCIES(${SCRIBUS_EXPORTEPUB_PLUGIN} ${EXE_NAME})
 </pre>
 
-# Using an "Options" structure to pass around the values from the dialog
+## Using an "Options" structure to pass around the values from the dialog
 
-# Adding a progress bar
+## Adding a progress bar
 
+## Debugging
+
+If you can compile and install your plugin but on start Scribus says:
+
+```
+There is a problem loading 1 of 58 plug-ins.
+
+- name of your plugin
+
+This is probably caused by some kind of dependency issue or old plug-ins existing in your install directory. If you clean out your install directory and reinstall and this still occurs, please report it on bugs.scribus.net.
+```
+
+Then:
+- check that the plugin `*_getPluginAPIVersion()`, `*_getPlugin()`,  and `*_freePlugin()` function names match the plugin library name.  
+  eg. if plugin is named `myexportplugin` and the `*_getPluginAPIVersion()` is named `myplugin_getPluginAPIVersion()`, plugin will failed to load
+- if plugin is not linked probably to its dependency it's another reason it may fail to load

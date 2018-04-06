@@ -176,3 +176,20 @@ too, but I like the structure of trying to understand one part, and
 how it feels like I understand something well much sooner, even if
 it's just a small part."
 =======
+
+
+
+## If I wanted to grok scribus where should I start reading
+
+In theory i could read from anywhere but it is a long dance with headers files etc.
+
+I would do it the other way round:
+
+- first you should know what you want to know.
+- most of the time, this has an entry point in the UI (a label, a menu entry).
+- take that string and search for it in the scribus code.
+- (take care about the & that produce the keyboard accelerators)
+- you will find a binding between a text and a function (or a function with an interesting name in the surroundings if you were grepping for a label)
+- now you can start search for a function name, then another function name until you come to a function that does something (inbetween there are often a few callbacks)
+
+personally, i use rg / ripgrep.  then, you have little chances to forget the flags (you don't need any: it does the common thing by default) and it provides nicely formatted results.

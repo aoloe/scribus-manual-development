@@ -1,5 +1,5 @@
 /***************************************************************************
-                          epubexplugin.cpp  -  description
+                          sampleplugin.cpp  -  description
                              -------------------
     begin                : Wed Oct 14 18:00:00 CEST 2012
     copyright            : (C) 2012 by Ale Rimoldi
