@@ -30,7 +30,7 @@ Once Qt Creator has built Scribus, you can run it with the "Run" command.
 
 Before being able to run Scribs, you need to install it (otherwise it won't find its resources). In order to install it, you need to add a "Deploy Step" to the Deployment configuration of the Run settings.
 
-In the "Add deploy step" action, pick the "Build" option and the `install` "Tool argument" for the "install" target: 
+In the "Add deploy step" action, pick the "Build" option and make sure that the `install` "install" target is checked:
 
 ![Set the `CMAKE_INSTALL_PREFIX` ](images/qt-creator-cmake-install-step.png)
 
@@ -42,5 +42,7 @@ By default, Qt Creator installs Scribus in `/usr/local`, which on most systems n
 You can change the target in the "Project"'s "Build and Run" configuration:
 
 ![Set the `CMAKE_INSTALL_PREFIX` ](images/qt-creator-cmake-install-prefix.png)
+
+Then click the "Apply Configuration Changes" button below the list of the options.
 
 Personally, I mostly use a `bin/scribus` directory in my home, but you can also use a `bin` directory in the build directory created by Qt Creator (`~/src/build-scribus-qt-creator-Desktop-Default/bin`).
