@@ -167,6 +167,10 @@ git@github.com:scribusproject/scribus.git
 
 As long as the dependencies are met, Qt Creator will be able to figure everything you need.
 
+One hint: by default Qt Creator compiles with only one core. If you want to improve the compilation speed, you can edit the project's configuration to ask gcc to build in parallel.
+
+On Linux and OS X, look for the "Build" settings of the current "Project" , and ensure that in the "Build environment" you have a `MAKEFLAGS` Environment variable that says `-j4` (you can change the 4 to a value gives you nice compile times while matching the number of the cores in your computer).
+
 ## Adding a plugin from a Github repository
 
 If you want to use or improve a plugin that has its own Github repository, you can download its code and add it to the Scribus code.
