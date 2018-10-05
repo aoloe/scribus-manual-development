@@ -59,3 +59,12 @@ You can change the target in the "Project"'s "Build and Run" configuration:
 Then click the "Apply Configuration Changes" button below the list of the options.
 
 Personally, I mostly use a `bin/scribus` directory in my home, but you can also use a `bin` directory in the build directory created by Qt Creator (`~/src/build-scribus-qt-creator-Desktop-Default/bin`).
+
+You can also permanently modify the path used by Qt Creator by editing the "Kit"'s defaults:
+
+- In `Tools > Options`, in the "Build & Run" section, pick the "Kits" tab.
+- Click on "Manual > Dekstop (default)".
+- Scroll down to the "CMake Configuration" and click on the "Change" button.
+- Modify the line `CMAKE_PREFIX_PATH:STRING=%{Qt:QT_INSTALL_PREFIX}` to `CMAKE_PREFIX_PATH:STRING=%{Env:<HOME>}/bin` to install into the `bin` directory in your home.
+
+Next time you add a project, Qt Creator will compile in your home and not in `/usr/local`.
