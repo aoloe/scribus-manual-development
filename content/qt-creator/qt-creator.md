@@ -22,7 +22,7 @@ Qt Creator will detect the `cmake` configuration and – as long as the dependen
 
 ## Using multiple cores
 
-By default Qt Creator compiles with only one core. If you want to improve the compilation speed, you can edit the project's configuration to ask gcc to build in parallel.
+If you don't have `ninja` installed, by default Qt Creator compiles with only one core. If you want to improve the compilation speed, you can edit the project's configuration to ask gcc to build in parallel.
 
 On Linux and OS X, look for the "Build" settings of the current "Project" , and ensure that in the "Build environment" you have a `MAKEFLAGS` Environment variable that says `-j4`.
 
