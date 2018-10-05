@@ -31,20 +31,26 @@ On Linux and OS X, look for the "Build" settings of the current "Project" , and 
 
 You can change the `4` to a value gives you nice compile times, while matching the number of the cores in your computer.
 
-## Installing Scribus before running it
+## Running your own build of Scribus
 
-Once Qt Creator has built Scribus, you can run it with the "Run" command.
+Before being able to run Scribus with Qt Creator's "Run" command, you'll need to:
 
-Before being able to run Scribs, you need to install it (otherwise it won't find its resources). In order to install it, you need to add a "Deploy Step" to the Deployment configuration of the Run settings.
+- Add an install step to the deployment configuration.
+- Change the target install to a directory in your _home_.
 
-In the "Add deploy step" action, pick the "Build" option and make sure that the `install` "install" target is checked:
+### Installing Scribus before running it
+
+Once Qt Creator has built Scribus, you can run it with the "Run" command. But, before being able to run your own build of Scribus, you have to make a further step: Scribus won't find its icons unless you first install.
+
+You can tell Qt Creator to install Scribus before running it, by adding a "Deploy Step" to the Deployment configuration of the Run settings.
+
+In the "Add deploy step" action, pick the "Build" option and make sure that the "install" target is checked:
 
 ![Set the `CMAKE_INSTALL_PREFIX` ](images/qt-creator-cmake-install-step.png)
 
+### The target install directory
 
-## The target install directory
-
-By default, Qt Creator installs Scribus in `/usr/local`, which on most systems needs the user to be `root` (and that's not a good idea...).
+By default, Qt Creator installs Scribus in `/usr/local`, which on most systems needs the user to be `root` (In most cases, installing self compiled software outside of your own home directory is a bad idea, anyway).
 
 You can change the target in the "Project"'s "Build and Run" configuration:
 
