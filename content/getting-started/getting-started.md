@@ -161,9 +161,15 @@ sudo ln -s ~/bin/scribus/bin/scribus scribus-dev
 
 If you're using Qt Creator, you can simply create a new project and use the Github address of the mirror:
 
-~~~.sh
+```
+https://github.com/scribusproject/scribus.git
+```
+
+or – if you've already setup the ssh authentication –:
+
+```
 git@github.com:scribusproject/scribus.git
-~~~
+```
 
 As long as the dependencies are met, Qt Creator will be able to figure everything you need.
 

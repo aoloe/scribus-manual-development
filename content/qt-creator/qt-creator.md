@@ -9,9 +9,16 @@ Qt Creator can _automatically_ fetch and compile the Scribus code from the Githu
 When creating the new project, just give the address:
 
 ```
+https://github.com/scribusproject/scribus.git
+```
+
+or – if you've already setup the ssh authentication –:
+
+```
 git@github.com:scribusproject/scribus.git
 ```
-Qt Creator will detect the `cmake` configuration and start compiling Scribus.
+
+Qt Creator will detect the `cmake` configuration and – as long as the dependencies are met – start compiling Scribus.
 
 ## Using multiple cores
 
