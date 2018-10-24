@@ -68,3 +68,13 @@ You can also permanently modify the path used by Qt Creator by editing the "Kit"
 - Modify the line `CMAKE_PREFIX_PATH:STRING=%{Qt:QT_INSTALL_PREFIX}` to `CMAKE_PREFIX_PATH:STRING=%{Env:<HOME>}/bin` to install into the `bin` directory in your home.
 
 Next time you add a project, Qt Creator will compile in your home and not in `/usr/local`.
+
+### Debugging
+
+If you want to run Scribus in debug mode, you need to edit the Build edit configuration in the "Projects > Build Settings". For the "Debug" build configuration, add to the Cmake section the value:
+
+```
+WANT_DEBUG              1
+```
+
+Warning: setting `CMAKE_BUILD_TYPE=Debug` does not seem to have any effect, since the Scribus `CMakeLists.txt` file probably overwrites that value.
