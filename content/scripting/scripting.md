@@ -1,6 +1,16 @@
-# Enhancing the Scribus scripter
+# The Scribus Scripter
 
-## The new scripter
+## Automating taks with the Scripter
+
+### Writing a Script
+
+- Use a text editor like [Atom]() or [Visual Code]() to write your Python scripts.
+- Do not use the Scribus internal console ("Scripter > Show Console").
+
+
+## Enhancing the Scribus scripter
+
+### The new scripter
 
 - The Scripter itself is programmed in Python
 
@@ -33,12 +43,12 @@ But, must be further improved:
 - it must be easier to run again the last script you have run
 
 
-## Adding a new function to the new scripter
+### Adding a new function to the new scripter
 
 
 - if you add a new file, don't forget to add its .cpp and .h files to the `CMakeLists.txt` file
 
-## Adding a new function to the old scripter
+### Adding a new function to the old scripter
 
 how to add a new function to the scripter?
 
@@ -52,7 +62,7 @@ how to add a new function to the scripter?
     - add the doc string to cmdtextdocwarnings() at the end of the file
 - add the function in scriptplugin.cpp (after the preeding one in the `cmd*.cpp`)
 
-## Porting the Scribus Calendar to the new Scripter
+### Porting the Scribus Calendar to the new Scripter
 !adding setParagraphStyle`()`
 !! goal
 - set the style for the
@@ -60,7 +70,7 @@ how to add a new function to the scripter?
   - the current frame or
   - the style named through the parameter
 
-#Updating the Scripter API Documentation
+### Updating the Scripter API Documentation
 
 - Install the Sphinx documentation system (`python-sphynx` on debian).
 - Fork [jainbasil's Github repository](https://github.com/jainbasil/scripter-doc) and clone it.
