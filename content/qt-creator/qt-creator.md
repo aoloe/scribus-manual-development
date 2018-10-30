@@ -77,4 +77,6 @@ If you want to run Scribus in debug mode, you need to edit the Build edit config
 WANT_DEBUG              1
 ```
 
+Don't forget to apply the change with the "Apply Configuration Changes" button below the list of the options.
+
 Warning: setting `CMAKE_BUILD_TYPE=Debug` does not seem to have any effect, since the Scribus `CMakeLists.txt` file probably overwrites that value.
