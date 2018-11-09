@@ -73,9 +73,15 @@ Next time you add a project, Qt Creator will compile in your home and not in `/u
 
 The world has mostly settled to indenting with four or  two spaces, but Scribus sticks to the policy of using tabs in the files that are not automatically generated.
 
-Once you're Scribus Qt project is setup, go to the "Projects" tool, pick the _Project Settings_ for the _Editor_, switch the _Editor Settings_ to _Custom_ and change the _Tabs policy_ to "Tabs Only". You will also probably want to set the _Tab size_ to 4.
+In the "Projects" tool, pick the _Project Settings_ for the _Code Style, make sure that the language is C++, and click on the "Edit..." button.
 
-![](images/editor-tabs.png)
+![](images/editor-code-style.png)
+
+In the _Code Style_ dialog, click on "Copy Built-in Code Style", name the new style "Scribus" and pick the _Tab policy_ "Tabs Only".
+
+![](images/editor-code-style-scribus.png)
+
+Click on "OK" to save the new style and make sure that the _Current settings_ is now "Scribus".
 
 ### Debugging
 
