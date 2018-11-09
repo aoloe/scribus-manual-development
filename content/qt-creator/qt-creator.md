@@ -69,6 +69,14 @@ You can also permanently modify the path used by Qt Creator by editing the "Kit"
 
 Next time you add a project, Qt Creator will compile in your home and not in `/usr/local`.
 
+### Indenting with tabs
+
+The world has mostly settled to indenting with four or  two spaces, but Scribus sticks to the policy of using tabs in the files that are not automatically generated.
+
+Once you're Scribus Qt project is setup, go to the "Projects" tool, pick the _Project Settings_ for the _Editor_, switch the _Editor Settings_ to _Custom_ and change the _Tabs policy_ to "Tabs Only". You will also probably want to set the _Tab size_ to 4.
+
+![](images/editor-tabs.png)
+
 ### Debugging
 
 If you want to run Scribus in debug mode, you need to edit the Build edit configuration in the "Projects > Build Settings". For the "Debug" build configuration, add to the Cmake section the value:
