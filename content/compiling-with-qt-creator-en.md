@@ -1,6 +1,17 @@
 # Using Qt Creator with Scribus
 
+This chapter has only been tested on Linux, but it should very likely also work on Mac OS.
+
+Using Qt Creator is not yet supported on Windows.
+
 ## Getting and compiling Scribus
+
+### Getting the dependencies
+
+Please refer to the chapter about compiling from the command line:
+
+- [Installing the dependencies for Linux]()
+- [Installing the dependencies for Mac OS]()
 
 ### Getting the Scribus project
 

@@ -23,9 +23,13 @@ I should integrate some things <from http://forum.freecadweb.org/viewtopic.php?f
 
 ## Branching
 
-In your github fork, you need to keep your master branch clean, by clean I mean without any changes, like that you can create at any time a branch from your master. Each time, that you want to commit a bug or a feature, you need to create a branch for it, which will be a copy of your master branch.
+In your github fork, you need to keep your master branch clean, by clean I mean without any changes. This way, at any time you can create a new branch from your master.
 
-The easy way is to create a new branch on GitHub by typing the new name in the "Branches" selector.
+Each time, that you want to fix a bug or a implement a feature, you need to create a new branch for it, which initially will be a copy of your master branch.
+
+Those are often called _feature branches_, because the branch is specific to a feature.
+
+The easy way is to create a new branch on GitHub by typing the new name in the "Branches" selector and then pull the repository.
 
 > TODO: screenshot
 
@@ -53,7 +57,7 @@ You can see all branches created by using
 
 ## Comitting your changes
 
-Don't forget to commit you're code from time to time.
+Don't forget to commit you're code from time to time. Always make sure that you're working on your feature branch.
 
 You're also welcome to push your changes to your GitHub repository. If you have questions about your work, this is the best way to show the issues to the other contributors.
 

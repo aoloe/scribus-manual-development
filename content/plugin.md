@@ -3,27 +3,59 @@
 - use the name "model" instead of action
 - use the options to pass the values between the dialog and the model
 - define a qDebug() for the options
+- document the difference between `ScActionPlugin` and `ScPersistentPlugin` and why mosts plugins are `ScActionPlugin` but the `scriptplugin` is `ScPersistentPlugin`.
 
 ## Adding an empty plugin
 
-- If you're using Git, it's a good idea to create a new branch in your Scribus fork. Before starting with programming the plugin.
+- If you're using Git, it's a good idea to create a new branch in your Scribus fork. Before starting with programming the plugin. As an alternative, you can create a separate repository for the plugin.
 - Create a new directory in the plugins/ directory with the name of the plugin (or in one of its subdirectories if the new plugin is part of a type). In this examples we will use the name "sample"... to create the sample plugin.
-  - the boilerplate for loading and defining your code as a plugin, will go the file "sampleplugin.cpp"
-  - the main code of your plugin will go to "sample.cpp"
-  - if you are creating a dialog it will be called "sampledialog.ui" and it will be included through the files "sampledialog.cpp" and "sampledialog.h"
-- create the main plugin class, named with the name of the plugin and the word "plugin".
-  <pre>
-  sampleplugin.cpp
-  sampleplugin.h
-  </pre>
+  - the boilerplate for loading and defining your code as a plugin, will go in the `plugin.cpp` and `plugin.h` files.
+  - all your code will be in the namespace `ScribusPlugin::Sample`.
+  - the main code of your plugin will go in the `sample.cpp` and `sample.cpp` files.
+  - if you are creating a dialog it will be in the plugin's `ui` directory and named "sampledialog.ui". It will be included through the `sampledialog.cpp` and `sampledialog.h` files.
+- create the `Plugin` files that are called by Scribus to load your code:
+
+  ```
+  plugin.cpp
+  plugin.h
+  ```
+
   The two files are in the download folder under sampleplugin\_base
   TODO: in the parameters for ::run(): what is QString target?
   TODO: describe briefly the content of the two files
 
 - add the directory to the plugins/CMakeLists.txt file as:
-    ADD_SUBDIRECTORY(pluginname)
+    ADD_SUBDIRECTORY(sample)
 - add a CMakeLists.txt file in the plugin directory
 - you can now try to compile the plugin. at the end you should have an entry "Sample" in your "Extra" menu
+
+## The plugin's settings
+
+The Plugin's settings are defined through `m_actionInfo` object.
+
+### Adding to a menu
+
+The string to use for `m_actionInfo.menuAfterName` is not the English string, but the internal name of the menu. So in your case, the proper code should not be:
+
+m_actionInfo.menuAfterName = "Tooltips";
+
+but
+
+m_actionInfo.menuAfterName = "helpTooltips";
+
+For the Help menu, the list of the valid internal names can be found in `ActionManager::initHelpMenuActions()`
+
+## Accessing the Scribus main window
+
+```cpp
+#include "scribuscore.h"
+
+// ...
+
+if (ScCore->usingGUI) {
+    ScribusMainWindow mainWindow = mainWindow = ScCore->primaryMainWindow();
+}
+```
 
 ## Plugins specificities
 
@@ -85,6 +117,12 @@ Scribus does not really have an API for plugins: You can access any functionalit
 <pre>
 ADD_DEPENDENCIES(${SCRIBUS_EXPORTEPUB_PLUGIN} ${EXE_NAME})
 </pre>
+
+## The `PLUGIN_API` macro
+
+The `PLUGIN_API` macro is used for marking a class so that its symbols are visible outside of the compiling unit (the `dll` or `so` for a plugin).
+
+This is necessary for MSVC and for some gcc setups. You can check the details in the `plugin_api.h` file at the root of the scribus source tree.
 
 ## Using an "Options" structure to pass around the values from the dialog
 
