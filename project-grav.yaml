@@ -1,0 +1,15 @@
+content_dir: content/
+languages:
+  - en
+title:
+  en: Scribus Programmers Manual
+toc: toc
+chapters:
+  - introduction
+  - getting-the-code
+  - getting-the-dependencies
+  - compiling-on-linux
+  - compiling-on-macos
+  - compiling-with-qt-creator
+  - compiling-with-visual-studio
+  - glossary
