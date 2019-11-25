@@ -8,9 +8,8 @@ First, you prepare your computer for C++ development:
 According to the Scribus PPA for ubuntu, you'll need the following packages for compiling Scribus:
 
 - build-essential
-- cmake (>= 2.4.3)
+- cmake (>= 3.12.0)
 - gettext
-- libboost-python-dev
 - libcairo2-dev
 - libcdr-dev
 - libcups2-dev
@@ -35,7 +34,7 @@ According to the Scribus PPA for ubuntu, you'll need the following packages for 
 - libvisio-dev
 - libwpg-dev
 - libxml2-dev
-- python-all
+- python3-all-dev
 - qtbase5-dev
 - qttools5-dev
 - qttools5-dev-tools
@@ -46,7 +45,7 @@ The names for those packages should be pretty similar in Debian and other Linux 
 ## Debian, Ubuntu and their derivates
 
 ```sh
-sudo apt install subversion g++ cmake extra-cmake-modules libpoppler-dev libpoppler-cpp-dev libpoppler-private-dev qtbase5-dev qttools5-dev libopenscenegraph-dev libgraphicsmagick-dev libcairo2-dev librevenge-dev python-all-dev libhunspell-dev libcups2-dev libboost-python-dev libpodofo-dev libcdr-dev libfreehand-dev libpagemaker-dev libmspub-dev libqxp-dev libvisio-dev libzmf-dev libgraphicsmagick++1-dev
+sudo apt install subversion g++ cmake extra-cmake-modules libpoppler-dev libpoppler-cpp-dev libpoppler-private-dev qtbase5-dev qttools5-dev libopenscenegraph-dev libgraphicsmagick-dev libcairo2-dev librevenge-dev python3-all-dev libhunspell-dev libcups2-dev libpodofo-dev libcdr-dev libfreehand-dev libpagemaker-dev libmspub-dev libqxp-dev libvisio-dev libzmf-dev libgraphicsmagick++1-dev
 ```
 
 If you have the matching version of Scribus installed through the package management, on Debian and Ubuntu you can do:
@@ -58,13 +57,13 @@ sudo apt-get build-dep scribus-trunk
 ## OpenSuse
 
 ```sh
-sudo zypper install subversion cmake extra-cmake-modules libqt5-qttools-devel GraphicsMagick-devel libfreehand-devel librevenge-devel libvisio-devel libqxp-devel libmspub-devel libcdr-devel libpagemaker-devel cups-devel libtiff-devel libzmf-devel libpoppler-qt5-devel libqt5-qtbase-devel libOpenSceneGraph-devel python-devel libjpeg62-devel liblcms2-devel harfbuzz-devel libopenssl-devel hunspell-devel
+sudo zypper install subversion cmake extra-cmake-modules libqt5-qttools-devel GraphicsMagick-devel libfreehand-devel librevenge-devel libvisio-devel libqxp-devel libmspub-devel libcdr-devel libpagemaker-devel cups-devel libtiff-devel libzmf-devel libpoppler-qt5-devel libqt5-qtbase-devel libOpenSceneGraph-devel python3-devel libjpeg62-devel liblcms2-devel harfbuzz-devel libopenssl-devel hunspell-devel
 ```
 
 ## Arch
 
 ```
-sudo pacman -S subversion gcc make cmake extra-cmake-modules qt5-base qt5-tools openscenegraph python2 pkgconfig hunspell podofo boost graphicsmagick poppler librevenge harfbuzz-icu libfreehand libpagemaker libcdr libmspub libqxp libvisio libzmf
+sudo pacman -S subversion gcc make cmake extra-cmake-modules qt5-base qt5-tools openscenegraph python pkgconfig hunspell podofo boost graphicsmagick poppler librevenge harfbuzz-icu libfreehand libpagemaker libcdr libmspub libqxp libvisio libzmf
 ```
 
 ## Solus
