@@ -49,7 +49,7 @@ Before being able to run Scribus with Qt Creator's "Run" command, you'll need to
 
 ### Installing Scribus before running it
 
-Once Qt Creator has built Scribus, you can run it with the "Run" command. But, before being able to run your own build of Scribus, you have to make a further step: Scribus won't find its icons unless you first install.
+Once Qt Creator has built Scribus, you can run it with the "Run" command. But, before being able to run your own build of Scribus, you have to make a further step: Scribus won't find its icons unless you install it.
 
 You can tell Qt Creator to install Scribus before running it, by adding a "Deploy Step" to the Deployment configuration of the Run settings.
 
@@ -80,7 +80,7 @@ Next time you add a project, Qt Creator will compile in your home and not in `/u
 
 ### Indenting with tabs
 
-The world has mostly settled to indenting with four or  two spaces, but Scribus sticks to the policy of using tabs in the files that are not automatically generated.
+The world has mostly settled to indenting with four or two spaces, but Scribus sticks to the policy of using tabs in the files that are not automatically generated.
 
 In the "Projects" tool, pick the _Project Settings_ for the _Code Style, make sure that the language is C++, and click on the "Edit..." button.
 
