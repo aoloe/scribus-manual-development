@@ -15,19 +15,17 @@ Please refer to the chapter about compiling from the command line:
 
 ### Getting the Scribus project
 
-Qt Creator can _automatically_ fetch and compile the Scribus code from the Github mirror.
+Qt Creator can _automatically_ fetch and compile the Scribus code from the one of the Git mirror.
 
 When creating the new project, just give the address:
-
-```
-https://github.com/scribusproject/scribus.git
-```
-
-or – if you've already setup the ssh authentication –:
-
-```
-git@github.com:scribusproject/scribus.git
-```
+- For Gitlab:  
+  `https://gitlab.com/scribus/scribus.git`
+  or – if you've already setup the ssh authentication –:  
+  `git@gitlab.com:scribus/scribus.git`
+- For Github:  
+  `https://github.com/scribusproject/scribus.git`
+  or – if you've already setup the ssh authentication –:  
+  `git@github.com:scribusproject/scribus.git`
 
 Qt Creator will detect the `cmake` configuration and – as long as the dependencies are met – start compiling Scribus.
 
