@@ -19,11 +19,11 @@ Qt Creator can _automatically_ fetch and compile the Scribus code from the one o
 
 When creating the new project, just give the address:
 - For Gitlab:  
-  `https://gitlab.com/scribus/scribus.git`
+  `https://gitlab.com/scribus/scribus.git`  
   or – if you've already setup the ssh authentication –:  
   `git@gitlab.com:scribus/scribus.git`
 - For Github:  
-  `https://github.com/scribusproject/scribus.git`
+  `https://github.com/scribusproject/scribus.git`  
   or – if you've already setup the ssh authentication –:  
   `git@github.com:scribusproject/scribus.git`
 
