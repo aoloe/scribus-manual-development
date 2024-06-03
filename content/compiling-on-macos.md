@@ -1,4 +1,4 @@
-# Compiling on Mac OS
+# Compiling on MacOS
 
 This chapter is a quick introduction to getting Scribus to compile on Mac OS. It's written for users who already know how to compile code and want to know the few details that are specific to Scribus.
 
@@ -9,33 +9,6 @@ If Scribus is the first software you're compiling, this chapter can still be ver
 To get Scribus compiled you'll need a recent version of Mac OS and Home Brew.
 
 Currently, you can compile Scribus from the command line or use Qt Creator.
-
-## Getting the code
-
-You can get the code from the Scribus own Subversion repository
-
-```sh
-svn co svn://scribus.net/trunk/Scribus scribus
-```
-
-or from one of the community maintained mirrors:
-
-- From the Github mirror:  
-  `git clone git@github.com:scribusproject/scribus.git` or
-  `git clone https://github.com/scribusproject/scribus.git`
-- From the Gitlab mirror:   
-  `git@gitlab.com:scribus/scribus.git` or
-  `https://gitlab.com/scribus/scribus.git`
-
-### Forking the code for development
-
-If you plan to work on the Scribus code and are using Git, you should create and clone your own fork of the [scribus repository](https://github.com/scribusproject/scribus):
-
-- Most likely, you will need to setup your system and your Github account to use ssh keys: https://help.github.com/articles/connecting-to-github-with-ssh/
-- Use the "Fork" button at the top of the [scribus repository](https://github.com/scribusproject/scribus) to create your own fork.
-- Clone your own copy of Scribus: `git clone https://github.com/your-username/scribus.git`
-
-For more details please read [Github's forkin manual](https://help.github.com/articles/fork-a-repo/).
 
 ## Compiling from the command line
 

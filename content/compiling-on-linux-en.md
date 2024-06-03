@@ -10,7 +10,7 @@ To get Scribus compiled you'll need a Linux distribution with up to date package
 
 Currently, you can compile Scribus from the command line or use Qt Creator.
 
-Before starting compiling Scribus, you should make sure that [all dependencies are met](getting-the-dependencies-en.md).
+Before starting compiling Scribus, you should make sure that [all dependencies are met](getting-the-dependencies-linux-en.md).
 
 ## Compiling from the command line
 
@@ -157,7 +157,7 @@ In order to get the new plugins to be compiled you need to rerun cmake (with all
 
 ```sh
 cd ~/src/scribus/build/
-cmake -DCMAKE_INSTALL_PREFIX:PATH=~/bin/scribus -DWANT_DEBUG=1 -DWANT_GUI_LANG="en_GB;de;fr;it;en" ..
+cmake -DCMAKE_INSTALL_PREFIX:PATH=~/bin/scribus -G Ninja -DWANT_DEBUG=1 -DWANT_GUI_LANG="en_GB;de;fr;it;en" ..
 make
 make install
 ```

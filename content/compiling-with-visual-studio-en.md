@@ -164,10 +164,10 @@ Run the `install-scribus.bat` file. It is important that you do this before the 
 
 - Open the folder "scribus-root-path\Scribus Libs\scribus-1.5.x-libs-msvc2015\copy-platform-dlls-to-build-dir.bat" created in step 3.
 - Open the "copy-platform-dlls-to-build-dir.bat" in a text editor. 
-- Change the value of "SCRIBUS_BUILDS_DIR" to "scribus-root-path\Scribus-builds".
-- Change the value of SCRIBUS_LIB_PLATFORM from "Unknown" to "x64" for 64 bit or "Win32" for 32 bit.
+- Change the value of `SCRIBUS_BUILDS_DIR` to `scribus-root-path\Scribus-builds`.
+- Change the value of `SCRIBUS_LIB_PLATFORM` from `Unknown` to `x64` for 64 bit or `Win32` for 32 bit.
 - Verify that all the details are correct.
-- Run "copy-platform-dlls-to-build-dir.bat"
+- Run `copy-platform-dlls-to-build-dir.bat`
 
 ### d. Install the QT plugins and QT DLLs used by Scribus.
 
@@ -273,7 +273,7 @@ If you want to build using a different toolset, you can use msbuild through the 
 build-all-platform-libs.bat script. For example :
 
 - to build with Visual Studio 2015 default toolset for x64 platform: build-all-platform-libs.bat x64 v140
-- to build with Visual Studio 2015 Windows XP toolset for Win32 platform: build-all-platform-libs.bat Win32 v140_xp
+- to build with Visual Studio 2015 Windows XP toolset for Win32 platform: `build-all-platform-libs.bat Win32 v140_xp`
 
 ### Compiling Scribus
 
@@ -283,4 +283,4 @@ build-all-platform-libs.bat script. For example :
 ### Installing Scribus
 
 c. Installing the Scribus 1.5.x specific 3rd party libs:
-  - If you're building for Windows XP, set the value of "SCRIBUS_LIB_TOOLSET" as `v140_xp`.
+  - If you're building for Windows XP, set the value of `SCRIBUS_LIB_TOOLSET` as `v140_xp`.

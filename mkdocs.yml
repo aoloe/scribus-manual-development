@@ -1,0 +1,53 @@
+site_name:  Scribus Development Manual
+theme: readthedocs
+docs_dir: content
+site_dir: out
+markdown_extensions:
+- nl2br
+nav:
+- Introduction: index.md
+- Creating a PDF: creating-a-pdf.md
+- Ask the printer: ask-the-printer.md
+- Transparencies: transparencies.md
+- Adding commands to the scripter: scripter.md
+
+getting-started
+
+getting-the-code-en.md
+getting-the-code-en.md~
+
+getting-the-dependencies-linux-en.md
+
+compiling-on-linux-en.md
+compiling-on-macos.md
+compiling-with-visual-studio-en.md
+compiling-with-qt-creator-en.md
+compiling-troubleshooting-en.md
+
+debugging
+glossary
+how-you-can-help
+introduction-en.md
+library-en.md
+literature
+non-programmers
+patches_-_first-patch
+patches-github
+patches_-_github
+patches-github-command-line-en.md
+patches-github-desktop-en.md
+patches-gitlab-command-line-en.md
+patches-svn-en.md
+plugin
+plugin-en.md
+qt-creator
+scribus-code
+scripting
+setup
+toc-en.md
+TOC.yaml
+translating-ui-en.md
+ui-ux
+writing-code
+
+community
