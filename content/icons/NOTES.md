@@ -18,6 +18,10 @@ icoPrint.addPixmap(im.loadPixmap("16/document-print.png"), QIcon::Normal, QIcon:
 noPrint->setIcon(icoPrint);
 ```
 
+## Getting the build to see new icons
+
+If you add or modify icons, you need to remove the `resources/` directory in yuour build and rerun `cmake` and `make` / `ninja`, in order to have the icons to be seen by the build system.
+
 ## Using Inkscape
 
 - Create a new file

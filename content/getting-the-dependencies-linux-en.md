@@ -42,6 +42,13 @@ According to the Scribus PPA for ubuntu, you'll need the following packages for 
 
 The names for those packages should be pretty similar in Debian and other Linux distributions.
 
+Qt 6:
+
+- libqt6core5compat6
+- linguist-qt6
+
+cf. the docker file in the main branch
+
 ## Debian, Ubuntu and their derivates
 
 ```sh
