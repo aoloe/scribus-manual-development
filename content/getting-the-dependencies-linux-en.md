@@ -4,81 +4,82 @@ First, you prepare your computer for C++ development:
 
 ## Packages needed for compiling Scribus
 
-
-According to the Scribus PPA for ubuntu, you'll need the following packages for compiling Scribus:
+From the Docker images used to create the Appimage on Gitlab:
 
 - build-essential
-- cmake (>= 3.12.0)
 - gettext
-- libcairo2-dev
-- libcdr-dev
+- cmake
+- libboost-dev
 - libcups2-dev
-- libfreehand-dev
-- libgraphicsmagick++1-dev
-- libharfbuzz-dev
 - libhunspell-dev
 - libhyphen-dev
-- libicu-dev
 - liblcms2-dev
-- libmspub-dev
-- libopenscenegraph-dev
-- libpagemaker-dev
 - libpodofo-dev
+- libpng-dev
+- libjpeg-dev
+- libtiff-dev
+- libpython3-dev
+- python3-tk
+- zlib1g-dev
+- libxml2-dev
+- qt6-base-dev
+- qt6-base-private-dev
+- qt6-declarative-dev
+- qt6-tools-dev
+- qt6-wayland-dev
+- libqt6core5compat6-dev
+- qt6-svg-dev
+- libqt6svg6-dev
+- linguist-qt6
+- qt6-base-dev-tools
+- qt6-image-formats-plugins
+- qt6-l10n-tools
+- qt6-tools-dev-tools
+- qt6-translations-l10n
+- qt6-gtk-platformtheme
+- libgraphicsmagick++1-dev
+- libopenscenegraph-dev
+- libpoppler-dev
 - libpoppler-cpp-dev
+- libpoppler-qt6-dev
 - libpoppler-dev
 - libpoppler-private-dev
-- libqt5opengl5-dev
-- libqt5webkit5-dev
-- librevenge-dev
-- libtiff-dev
-- libvisio-dev
+- libcairo2-dev
+- libfreetype6-dev
 - libwpg-dev
-- libxml2-dev
-- python3-all-dev
-- qtbase5-dev
-- qttools5-dev
-- qttools5-dev-tools
-- zlib1g-dev
+- libmspub-dev
+- libcdr-dev
+- libvisio-dev
+- libharfbuzz-dev
+- libharfbuzz-icu0
+- libgtk2.0-dev
 
-The names for those packages should be pretty similar in Debian and other Linux distributions.
-
-Qt 6:
-
-- libqt6core5compat6
-- linguist-qt6
-
-cf. the docker file in the main branch
+The names for those packages should be pretty similar in Debian based and other Linux distributions.
 
 ## Debian, Ubuntu and their derivates
 
 ```sh
-sudo apt install subversion g++ cmake extra-cmake-modules libpoppler-dev libpoppler-cpp-dev libpoppler-private-dev qtbase5-dev qttools5-dev libopenscenegraph-dev libgraphicsmagick-dev libcairo2-dev librevenge-dev python3-all-dev libhunspell-dev libcups2-dev libpodofo-dev libcdr-dev libfreehand-dev libpagemaker-dev libmspub-dev libqxp-dev libvisio-dev libzmf-dev libgraphicsmagick++1-dev
+sudo apt install build-essential gettext cmake libboost-dev libcups2-dev \
+libhunspell-dev libhyphen-dev liblcms2-dev libpodofo-dev libpng-dev libjpeg-dev \
+libtiff-dev libpython3-dev python3-tk zlib1g-dev libxml2-dev qt6-base-dev \
+qt6-base-private-dev qt6-declarative-dev qt6-tools-dev qt6-wayland-dev \
+libqt6core5compat6-dev qt6-svg-dev libqt6svg6-dev linguist-qt6 qt6-base-dev-tools \
+qt6-image-formats-plugins qt6-l10n-tools qt6-tools-dev-tools qt6-translations-l10n \
+qt6-gtk-platformtheme libgraphicsmagick++1-dev libopenscenegraph-dev libpoppler-dev \
+libpoppler-cpp-dev libpoppler-qt6-dev libpoppler-dev libpoppler-private-dev \
+libcairo2-dev libfreetype6-dev libwpg-dev libmspub-dev libcdr-dev libvisio-dev \
+libharfbuzz-dev libharfbuzz-icu0 libgtk2.0-dev
 ```
 
 If you have the matching version of Scribus installed through the package management, on Debian and Ubuntu you can do:
 
 ```sh
-sudo apt-get build-dep scribus-trunk
+sudo apt build-dep scribus
 ```
 
-## OpenSuse
+## Other distribution
 
-```sh
-sudo zypper install subversion cmake extra-cmake-modules libqt5-qttools-devel GraphicsMagick-devel libfreehand-devel librevenge-devel libvisio-devel libqxp-devel libmspub-devel libcdr-devel libpagemaker-devel cups-devel libtiff-devel libzmf-devel libpoppler-qt5-devel libqt5-qtbase-devel libOpenSceneGraph-devel python3-devel libjpeg62-devel liblcms2-devel harfbuzz-devel libopenssl-devel hunspell-devel
-```
-
-## Arch
-
-```
-sudo pacman -S subversion gcc make cmake extra-cmake-modules qt5-base qt5-tools openscenegraph python pkgconfig hunspell podofo boost graphicsmagick poppler librevenge harfbuzz-icu libfreehand libpagemaker libcdr libmspub libqxp libvisio libzmf
-```
-
-## Solus
-
-```sh
-sudo eopkg install -c system.devel
-sudo eopkg install subversion qt5-tools-devel graphicsmagick-devel openscenegraph-devel poppler-qt5-devel qt5-base-devel librevenge-devel libfreehand-devel libvisio-devel libqxp-devel libhunspell-devel libmspub-devel libcdr-devel libpagemaker-devel podofo-devel cups-devel libjpeg-turbo-devel libtiff-devel libzmf-devel libboost-devel
-```
+You're welcome to contribute the command for installing the packages needed for other distributions.
 
 ## Keeping up to date with the dependencies
 
