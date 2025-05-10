@@ -9,6 +9,13 @@ Currently Scribus has:
 
 ## Proposal for a new documentation
 
+The goal is to create:
+
+- A free documentation.
+- That is easy to keep up to date.
+- That is managed by long term maintainers but also allows one shot contributions.
+- Can be translated in multiple languages.
+
 ### Technical choices
 
 - Use markdown (with styles).
@@ -53,6 +60,25 @@ Currently Scribus has:
   - Troubleshooting / FAQ
   - Glossary (explain DTP and Scribus specific terms)
   - List of tutorials
+
+### Notes on the official Scribus documentation
+
+The official Scribus documentation:
+
+- Is published under a license that is not free (please don't use its content for creating free documentation)
+
+
+### Notes on the Scribus Wiki
+
+The Scribus Wiki has been used in the past to document Scribus.
+
+This somehow worked at a time when Scribus had a bigger team and a big stable community.
+
+But:
+
+- It's hard to integrate new contributors.
+- It's not easy to track the outdated content.
+- Does not work for enthusiastic one shot contributions.
 
 ### Notes
 
