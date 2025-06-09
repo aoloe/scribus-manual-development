@@ -10,6 +10,68 @@ To get Scribus compiled you'll need a recent version of Mac OS and Home Brew.
 
 Currently, you can compile Scribus from the command line or use Qt Creator.
 
+### Installing Qt 6
+
+- If you don't plan to write iOS apps with Qt, you can speed up the installation and save lot of disk space (about 15 GB).
+- Make sure you download the freee open source version of Qt, and NOT the free to try commercial version.
+
+#### Get the Qt installer
+
+- Go to https://www.qt.io/download-open-source
+- Hit "Download Qt Online Installer" button, which takes you to https://www.qt.io/download-qt-installer-oss
+- "Download Qt for open source use": Choose your OS: macOS.
+- Hit button "Qt Online Installer for macOS". This will point to the DMG disk image the macOS installer file, for example "qt-online-installer-macOS-x64-4.9.0.dmg".
+
+#### Run the Qt online installer app.
+
+- Run the DMG you just downloaded.
+- You will need to login with your Qt account: If you do not have any, Create new Qt account, email required.
+- If you have already installed Qt, Start Qt MaintenanceTool.app.
+
+- Login, choose Qt then choose the most recent version that is supported by Scribus (At the time of writing Qt 6.8.3).
+- Select [x] Desktop 6.8.3 and [x] Qt 5 Compatibility module. (Also Qt Shader Tools was selected, but unsure if needed)
+- Select [x] Build Tools, [x] CMake 3.30.5 (Optionally also Ninja).
+- Select [x] Qt Creator 16.0.2 (was pre selected)
+
+Hit next and let the tool download and install Qt.
+
+You can change these settings at anytime afterwards with the Qt MaintenanceTool.app tool.
+
+### Installing the dependencies with Homebrew
+
+Homebrew is a Package Manager for macOS.
+
+If you not have brew installed, install it. See https://brew.sh/
+
+```sh
+% brew install boost podofo hunspell
+```
+
+
+### Installing the dependencies with Macports
+
+## Getting the Scribus source code
+
+You will probably want to use Git to get the Scribus code:
+
+```sh
+% mkdir src
+% cd src
+% git clone https://github.com/scribusproject/scribus.git scribus
+```
+
+If Git is not installed yet, you can install it with Homebrew or Macports.
+
+This is a community mirror of the official SVN Scribus repository.
+
+If you want to get Scribus from the official server, you need to install svn (also with Homebrew or Macports) and then:
+
+```sh
+% mkdir src
+% cd src
+% svn co svn://scribus.net/trunk/Scribus scribus
+```
+
 ## Compiling from the command line
 
 Historically, compiling from the command line has been the most straighforward and common way for compiling Scribus. The alternative is to use Qt Creator, as explained in a separate chapter.
@@ -38,6 +100,25 @@ From the `build` directory, run the `cmake` command:
 ```sh
 $ cmake -DCMAKE_INSTALL_PREFIX:PATH=~/bin/scribus -DWANT_DEBUG=1 -DWANT_GUI_LANG="en_GB;de;fr;it;en" ..
 ```
+
+MrB's cmake command:
+
+```sh
+cmake -DQT_PREFIX="/Users/craig/Qt/6.9.0/macos"
+    -DWANT_DEBUG=ON
+    -DOSXMINVER="11.00"
+    -DLIBPODOFO_DIR_PREFIX:PATH=/opt/local/libexec/podofo-0.10/
+    -DWANT_NOEXAMPLES=ON
+    -DWANT_GRAPHICSMAGICK=ON
+    -DCMAKE_OSX_ARCHITECTURES="arm64"
+    -DBUILD_OSX_BUNDLE=ON
+    -DWANT_UNIVERSAL_BUNDLE=OFF
+    -DWANT_SVNVERSION=ON
+    -DWITH_BOOST=ON
+    -DWANT_PCH=ON
+    -DPython3_ROOT_DIR=/opt/local/Library/Frameworks/Python.framework/Versions/3.13/
+    -DCMAKE_INSTALL_PREFIX:PATH=/Users/craig/Applications/ScribusTrunk.app/
+    ../trunk/Scribus/
 ```
 
 With these options, CMake will prepare a build that:
